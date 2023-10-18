@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<div class="container">
+    {% for modda in moddalar %}
+    <div class="modda mt-4 mb-4" style="margin-left: 120px;margin-right: 120px;">
+        <div class="row mt-4 p-2">
+
+            <div class="col-1 text-center" style="border: 1px solid;border-radius: 10px;">
+                <p class="mt-2"> 
+                    <i class="fa-solid fa-calendar"></i> <br> {{modda.date }}
+                </p>
+            </div>
+            
+            <div class="col-9" style="border: 1px solid;border-radius: 10px;">
+               <h6 class="text-center">{{ modda.moddaSoni }}</h6>
+              <p>{{ modda.about }}
+              </p>
+            </div>
+            
+            <div class="col-1 text-center" style="border: 1px solid;border-radius: 10px;">
+                <a class="ml-3 mt-3" href="{{ modda.link.url }}"><i style="font-size:30px" class="fa-solid fa-download"></i></a>
+            </div>
+            
+        </div>
+
+    </div>
+    {% endfor %}
+  </div>
+
+{% endblock content%}
+{%block footer %}
+{%endblock footer%}

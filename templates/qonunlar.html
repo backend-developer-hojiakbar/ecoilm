@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+     <div class="container">
+         <div class="m-5">
+        <h3 class="m-4" style="text-align: center;">NORMATIV-HUQUQIY HUJJATLAR</h3>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item p-3" style="background-color: lightgray;"><a target="_blank" style="text-decoration: none; color:black"  href="https://lex.uz/uz/docs/-6445145"> O‘ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI 49-moddasi <br> O‘ZBEKISTON RESPUBLIKASI PREZIDENTINING QARORI EKOLOGIYA, ATROF-MUHITNI MUHOFAZA QILISH VA IQLIM O‘ZGARISHI VAZIRLIGI FAOLIYATINI SAMARALI TASHKIL ETISH  CHORA-TADBIRLARI TO‘G‘RISIDA</a></li>
+            <li class="list-group-item p-3"><a style="text-decoration: none; color:black" href="https://lex.uz/docs/6479134"> O‘zbekiston Respublikasi Prezidentining qarori 31.05.2023 yildagi PQ-171-son <br>  O‘ZBEKISTON RESPUBLIKASI PREZIDENTINING FARMONI EKOLOGIYA VA ATROF-MUHITNI MUHOFAZA  QILISH SOHASINI TRANSFORMATSIYA QILISH VA VAKOLATLI DAVLAT ORGANI FAOLIYATINI  TASHKIL ETISH CHORA-TADBIRLARI TO‘G‘RISIDA</a></li>
+            <li class="list-group-item p-3" style="background-color: lightgray;"><a style="text-decoration: none; color:black" href="https://lex.uz/docs/6479180"> O‘zbekiston Respublikasi Prezidentining Farmoni, 31.05.2023 yildagi PF-81-son  <br> O‘ZBEKISTON RESPUBLIKASI VAZIRLAR MAHKAMASINING QARORI ATROF MUHIT VA TABIATNI  MUHOFAZA QILISH TEXNOLOGIYALARI ILMIY-TADQIQOT INSTITUTI FAOLIYATINI YANADA  TAKOMILLASHTIRISH CHORA-TADBIRLARI TO‘G‘RISIDA</a></li>
+            <li class="list-group-item p-3"><a style="text-decoration: none; color:black" href="https://lex.uz/docs/6162576">O‘zbekiston Respublikasi Vazirlar Mahkamasining qarori, 18.08.2022 yildagi 458-son  <br> O‘ZBEKISTON RESPUBLIKASI VAZIRLAR MAHKAMASINING QARORI SUVDAN FOYDALANISH VA SUV  ISTE’MOLIDA SUV RESURSLARINING HISOBI VA HISOBOTINI HAMDA MONITORINGINI YURITISH  TARTIBINI YANADA TAKOMILLASHTIRISH CHORA-TADBIRLARI TO‘G‘RISIDA</a></li>
+            <li class="list-group-item p-3" style="background-color: lightgray;"><a style="text-decoration: none; color:black" href="https://lex.uz/uz/docs/5352871"> O‘zbekiston Respublikasi Vazirlar Mahkamasining qarori, 03.04.2021 yildagi 174-son  <br> MAZKUR YANGI TAHRIRDAGI O'O‘ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI 2023-YIL 30-APREL  KUNI O'TKAZILGAN O‘ZBEKISTON RESPUBLIKASI REFER ENDUMID UMUMHALQ OVOZ BERISH  ORQALI QABUL QILINGAN.</a></li>
+          </ul>
+          </div>
+    </div>
+
+{% endblock content %}
+
+{%block footer %}
+   {% for footerNew in footerNews%}
+      <li> <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
+         <strong>
+            <a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatewords:7}}</a>
+         </strong>
+         <span class="pdate"><i>Chop etildi:</i>{{footerNew.created_at}}</span>
+      </li>
+{% endfor %}
+{%endblock footer%}

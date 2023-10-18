@@ -1,0 +1,1 @@
+from Institute.wsgi import application 

@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+ <div class="container">
+     <h1>Kitoblar bo'limi hisoblanadi</h1>
+        <div class="row">
+        {% for y in book %}
+            <div class="col">
+                <div class="blog-small-post">
+                    <div class="post-thumb"> <a href="#">
+                       <i class="fas fa-link"></i></a>
+                       <img class="img-fluid" style="height: 287px;" src="{{ y.jpg.url }}" alt="">
+                    </div>
+                       <div class="post-txt">
+                          <span class="pdate"> </span>
+                          <h6 class="mt-5" ><a class="books-title" href="#">{{ y.nomi }}</a></h6>
+                          <button class="btn btn-success"><a class="books-title" target="_blank" href="{{ y.pdf.url }}" class="rm"><i class="fa-solid fa-download"></i> Yuklash Uchun Bosish</a></button>
+                       </div>
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

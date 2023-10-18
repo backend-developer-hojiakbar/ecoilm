@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+<div class="container" style="margin-top: 5%;">
+    <h2 style="text-align: center; line-height: 50px;" >Atrof muhit va tabiatni muhofaza qilish texnologiyalari ilmiy-tadqiqot institutining
+        tuzilmasi</h2>
+    <img src="{% static 'images/tuzilma2.jpg' %}" style="margin-left: 17%; margin-top: 3%;">
+    <div style="margin-left: 20%; font-weight: 600; color: #222;" class="izoh-tuzilma">
+        <br>
+         </div>
+</div>
+    
+{% endblock content %}
+
+{%block footer %}
+   {% for footerNew in footerNews%}
+      <li> <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
+         <strong>
+            <a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatewords:7}}</a>
+         </strong>
+         <span class="pdate"><i>Chop etildi:</i>{{footerNew.created_at}}</span>
+      </li>
+{% endfor %}
+{%endblock footer%}

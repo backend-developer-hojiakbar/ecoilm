@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<h1 class="text-center mt-4 mb-4">Ekologiya Institutining Patentlar Bo'limi</h1>
+
+<div class="container">
+      <div class="row  justify-content-center">
+          {% for x in patentlar %}
+        <div class="col-2 mt-3 mb-3">
+          <a href="{{ x.pdfrasm.url }}" download>
+            <img src="{{ x.jpgrasm.url }}" alt="" width="100%" height="270">
+          </a>
+        </div>
+          {% endfor %}
+
+      </div>
+    </div>
+{% endblock %}

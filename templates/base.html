@@ -1,0 +1,248 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="{% static '/images/website-logo.png' %}">
+      <title>Atrof-muhit va tabiatni muhofaza qilish texnologiyalari ilmiy-tadqiqot instituti</title>
+      <!-- CSS FILES START -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'css/color.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/prettyPhoto.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}" >
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   </head>
+   <style>
+       .patner__div{
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+         height: 250px;
+         width: 250px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: linear-gradient(to right, #1cd8d2, #93edc7);
+         color: white;
+         margin: 100px 0;
+         border-radius: 7px;
+      }
+       .joy{
+            width: 285px;
+            height: 100px;
+            margin-top: 20px;
+         }
+
+         .yangiliklar{
+            width: 68px;
+            height: 68px;
+         }
+         .li-flex{
+            display: flex;
+         }
+         .story-title-bg{
+            background: linear-gradient(rgba(204,204,204,1) 0%, rgba(204,204,204,1) 100%);;
+         }
+         .move{
+            margin-right: 10px;
+         }
+         .footer-yozuv__div{
+            display: flex;
+            flex-direction: column;
+         }
+         .footer-yozuv{
+            display: flex;
+            align-items: flex-start;
+         }
+         .footer-yozuv i{
+            margin-top: 3px;
+         }
+         .name-footer{
+            color: greenyellow;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size:20px;
+         }
+         .ikonkalar i {
+            font-size:30px;
+            margin-left:10px;
+
+         }
+         .ikonkalar i:hover {
+         color: #9ccc62;
+         }
+         .logo-still {
+         width:80px;
+         height:70px;
+
+         }
+         .navbar {
+             background: #33691e;
+         }
+    
+   </style>
+   <body>
+      <!--Header Start-->
+         <header class="header-style-2">
+            <nav style="" class="navbar navbar-expand-lg">
+               <a class="navbar-brand" style="margin-left:188px; margin-right:-95px; width: 60px;z-index:99;  " href="{% url 'home-page' %}">
+                   <img class="logo-still" src="{% static 'images/website-logo.png' %}" alt=""/> </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto" style="margin-left:100px;">
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'home-page'%}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biz haqimizda</a>
+                         <ul class="dropdown-menu">
+                             
+                             <!--<li><a href="{% url 'rahbariyat_list_page' %}">Rahbariyat</a></li>-->
+                             
+                             <li><a href="{% url 'tuzilma' %}">Tuzilma</a></li>
+                             <li><a href="{% url 'vazifa_funksiyalar' %}">Vazifa va funksiyalar</a></li>
+                             <li><a href="{% url 'labar_name' %}">Labaratoriyalar va bo'limlar</a></li>
+                         </ul>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'news-pages' %}">Yangiliklar</a>
+                     </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'home-page'%}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Xamkorlik va Loyihalar</a>
+                         <ul class="dropdown-menu">
+                             <li><a href="{% url 'xamkor' %}">Xorijiy hamkorlik</a></li>
+                             <li><a href="{% url 'first-projects' %}">Loyihalar</a></li>
+                             <li><a href="{% url 'patentlar' %}">Patentlar</a></li>
+                         </ul>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'ilmiy_kengash' %}">Ilmiy kengash</a>
+                     </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'moddalar'%}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ilmiy jurnal</a>
+                         <ul class="dropdown-menu">
+                             <li><a href="{% url 'science-pages' %}">Jurnallar</a></li>
+                             <li><a href="{% url 'send_article' %}">Maqola chop etish</a></li>
+                         </ul>
+                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'home-page'%}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Onlayn Kutubxona</a>
+                         <ul class="dropdown-menu">
+                             <li><a href="{% url 'qizil-kitob' %}">Qizil Kitob</a></li>
+                             <li><a href="{% url 'books' %}">Kitoblar</a></li>
+                             <li><a href="{% url 'moddalar' %}">Normativ-huquqiy hujjatlar</a></li>
+                         </ul>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </header>
+      <!--Header End-->
+         {% block content%}
+         {% endblock content%}
+       <!--Footer Start-->
+      <div style="background-color:black;">
+      <footer class="container" style="background-color: #D3D3D3;">
+         <div class="footer-top wf100">
+               <div class="row">
+                   <div class="col-lg-4 col-md-6 col-sm-6">
+                      <!--Footer Widget Start-->
+                    <div class="footer-widget footer-qism">
+                            <div class="footer-yozuv__div">
+                                 <div class="footer-yozuv">
+                                       <img style="width: 50px;height: 50px;margin-right: 20px;" src="{% static 'images/website-logo.png' %}" alt="">
+                                       <p style="font-size:20px; color:green"> Atrof-muhit va tabiatni muhofaza qilish texnologiyalari ilmiy-tadqiqot instituti</p>
+                                 </div>
+                                <div style="margin-left:15%">
+                                 <div style="width: 300px;" class="footer-yozuv">
+                                       <i style="color:green" class="fa-solid fa-location-dot move"></i>
+                                       <p style="color:green">Oʼzbekiston Respublikasi, Toshkent shahri, Chilonzor  tumani, <br> Bunyodkor shoh koʼchasi, 7-А uy <br></p>
+                                 </div>
+                                 <div class="footer-yozuv">
+                                       <i style="color:green" class="fa-solid fa-clock move"></i>
+                                       <p style="color:green">Ish vaqti : 9.00 - 18.00 <br></p>
+                                 </div>
+                                 <div class="footer-yozuv">
+                                       <i style="color:green" class="fa-solid fa-mug-hot move"></i>
+                                       <p style="color:green">Tushlik : 13.00 - 14.00 <br></p>
+                                 </div>
+                                 <div class="footer-yozuv">
+                                       <p style="color:green"> <i class="fa-solid fa-calendar-days"></i> Dam olish kuni: Shanba, Yakshanba <br></p>
+                                 </div>
+                                 <div class="footer-yozuv">
+                                       <i style="color:green" class="fa-solid fa-square-envelope move"></i>
+                                       <p style="color:green">E-mail : info@eco.gov.uz<br></p>
+                                 </div>
+                                 <div class="footer-yozuv">
+                                       <i style="color: green;" class="fa-solid fa-phone move"></i>
+                                       <p style="color:green">Bog'lanish :
+                                       +998 71 207-11-07<br>
+                                       (+99871) 207-07-70 <br></p>
+                                 </div>
+                                    </div>
+                          </div>
+                      </div>
+                      <!--Footer Widget End-->
+                   </div>
+                   <div class="col-lg-4 col-md-6 col-sm-6">
+                     <!--Footer Widget Start-->
+                     <div class="footer-widget">
+                        <p style="font-size:20px; color:green">So'nggi Yangiliklar</p>
+                        <ul class="lastest-products">
+                           {% block footer%}
+                           {% endblock footer%}
+                        </ul>
+                     </div>
+                     <!--Footer Widget End-->
+                  </div>
+                   <div class="col-lg-4 col-md-6 col-sm-6">
+                        <p style="font-size:20px; color:green">Bizni Ijtimoiy tarmoqlarda kuzatib boring</p>
+                        <div class="ikonkalar">
+                            <a href="Instagram.com/uzecoit"> <i class="fa-brands fa-instagram "></i></a>
+                            <a href="Facebook.com/uzecoit"> <i class="fa-brands fa-facebook "></i></a>
+                            <a href="https://t.me/Ecoilm"><i class="fa-brands fa-telegram "></i></a>
+                            <a href=" YouTube.com/@uzecoit"><i class="fa-brands fa-youtube "></i></a>
+                        </div>
+                        <div style="width: 80%; height: 90%;" class="footer-widget footer-qism">
+                        <iframe style="margin-top: 30px;"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2997.6486414220926!2d69.2254687!3d41.2947508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b62ad6c0735%3A0x2260c74fb009b861!2z0I7Qt9Cx0LXQutC40YHRgtC-0L0g0KDQtdGB0L_Rg9Cx0LvQuNC60LDRgdC4INCt0LrQvtC70L7Qs9C40Y8g0LLQsCDQsNGC0YDQvtGEINC80YPSs9C40YLQvdC4INC80YPSs9C-0YTQsNC30LAg0pvQuNC70LjRiCDQtNCw0LLQu9Cw0YIg0pvRntC80LjRgtCw0YHQuA!5e0!3m2!1sen!2s!4v1682565479652!5m2!1sen!2s"
+                            title="This is a unique title"   width="100%" height="60%" allowFullScreen loading="lazy"></iframe>
+                        </div>
+                </div>
+                </div>
+
+         <div class="footer-copyr wf100">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4 col-sm-4"> <img style="width:100px;" src="{% static 'images/iFraganus-IT-team-logo.jpg' %}" alt="iFragnus-team-logo"> </div>
+                  <div class="col-md-8 col-sm-8">
+                     <p style="color:green"> All Rights Reserved of iFragnus Team, Design & Developed By: iFragnus Team  </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+         <!-- ifraganus logo start-->
+      </footer>
+          </div>
+      <!--Footer End-->
+
+      <script type="text/javascript" src="{% static '/bootstrap/js/jquery-3.3.1.min.js' %}" ></script>
+      <script type="text/javascript" src="{% static '/bootstrap/js/jquery-migrate-1.4.1.min.js'%}" ></script>
+      <script type="text/javascript" src="{% static '/bootstrap/js/popper.min.js' %}" ></script>
+      <script type="text/javascript" src="{% static '/bootstrap/js/bootstrap.min.js' %}" ></script>
+      <script type="text/javascript" src="{% static '/owlcarousel/owl.carousel.min.js' %}" ></script>
+      <script type="text/javascript" src="{% static '/bootstrap/js/jquery.prettyPhoto.js' %}" ></script>
+      <script type="text/javascript" src="{% static '/slick/slick.min.js'%}" ></script>
+      <script type="text/javascript" src="{% static '/bootstrap/js/isotope.min.js' %}" ></script>
+      <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   </body>
+</html>
